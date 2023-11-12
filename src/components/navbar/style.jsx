@@ -4,18 +4,24 @@ import { colorPalet, spaceSystem, fontSizeBase } from "./../../style/global";
 export const Navbar = styled.nav`
   background-color: ${colorPalet.colorBlueBlue700};
   height: 60px;
-  padding: ${spaceSystem.paddingLarge};
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
 
-  @media (max-width: 768px) {
-    padding: ${spaceSystem.paddingSmall};
-  }
 `;
 
 export const NavbarItem = styled.div`
   user-select: none;
+  margin: ${spaceSystem.paddingLarge};
+
+  
+  @media (max-width: 768px) {
+    margin: ${spaceSystem.paddingSmall};
+  }
 `;
 
 export const CartContainer = styled.div`

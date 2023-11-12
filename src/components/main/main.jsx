@@ -4,7 +4,7 @@ import { Section } from "./style";
 const Main = () => {
   return (
     <Section>
-      {Array(8)
+      {Array(50)
         .fill()
         .map((_, index) => (
           <Product key={index} />
