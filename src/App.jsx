@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./style/global";
-import Home from "../pages/home";
-import NotFound from "../pages/notFound";
+import Home from "../src/pages/home";
+import NotFound from "../src/pages/notFound";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/loja" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
