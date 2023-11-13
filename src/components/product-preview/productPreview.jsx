@@ -1,20 +1,21 @@
+import { useContext } from "react";
 import { CloseButton } from "../../style/global";
 import * as Style from "./style";
+import ProductContext from "../../context/productContext";
 
-const ProductPreview = () => {
+const ProductPreview = ({ product }) => {
+  const { setCurrency, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(ProductContext);
+
   return (
     <Style.PreviewProduct>
-      <Style.CloseContainer>
+      <Style.CloseContainer onClick={() => removeFromCart(product.id)}>
         <CloseButton>X</CloseButton>
       </Style.CloseContainer>
 
       <Style.FirstHolder>
-        <img
-          src="https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP860/series7-480.png"
-          alt=""
-        />
+        <img src={product.photo} alt={product.name} />
 
-        <p>Apple Watch Series 4 GPS</p>
+        <p>{product.name}</p>
       </Style.FirstHolder>
 
       <Style.ProductChoices>
@@ -22,14 +23,14 @@ const ProductPreview = () => {
           <label htmlFor="productQtd">Qtde:</label>
 
           <div name="productQtd">
-            <span>-</span>
-            <span>3</span>
-            <span>+</span>
+            <span onClick={() => decreaseQuantity(product.id)}>-</span>
+            <span>{product.quantity}</span>
+            <span onClick={() => {increaseQuantity(product.id)}}>+</span>
           </div>
         </Style.SecondHolder>
 
         <Style.ThirdHolder>
-          <span>R$ 399,00</span>
+          <span>{setCurrency(product.price)}</span>
         </Style.ThirdHolder>
       </Style.ProductChoices>
     </Style.PreviewProduct>

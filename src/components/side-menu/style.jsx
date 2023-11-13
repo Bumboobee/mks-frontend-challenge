@@ -49,7 +49,7 @@ export const ContainerHolder = styled.div`
     position: absolute;
     justify-content: space-between;
     justify-items: unset;
-    bottom: 120px;
+    bottom: 105px;
     width: -webkit-fill-available;
     font-size: ${fontSizeBase + 14}px;
     font-weight: 700;
@@ -98,3 +98,10 @@ export const FinishHolder = styled.div`
     color: ${colorPalet.colorBaseBlack100};
   }
 `;
+
+export const EmptyCart = styled.div`
+  background-color: ${colorPalet.colorBaseWhite50};
+  padding: 14px;
+  color: ${colorPalet.colorBaseBlack100};
+  border-radius: 2px;
+`

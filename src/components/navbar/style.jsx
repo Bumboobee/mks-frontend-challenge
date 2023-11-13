@@ -11,14 +11,12 @@ export const Navbar = styled.nav`
   width: 100%;
   padding: 10px 0;
   z-index: 1000;
-
 `;
 
 export const NavbarItem = styled.div`
   user-select: none;
   margin: ${spaceSystem.paddingLarge};
 
-  
   @media (max-width: 768px) {
     margin: ${spaceSystem.paddingSmall};
   }
@@ -32,8 +30,10 @@ export const CartContainer = styled.div`
   display: flex;
   color: ${colorPalet.colorBaseBlack100};
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: 0.3s;
+  width: 65px;
 
   & span {
     font-weight: 700;

@@ -9,6 +9,7 @@ export const Product = styled.div`
   max-width: 230px;
   width: 220px;
   overflow: hidden;
+  justify-content: space-between;
 
   @media (max-width: 1180px) {
     width: 250px;

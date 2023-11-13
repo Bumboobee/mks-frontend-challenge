@@ -5,7 +5,7 @@ import { useContext } from "react";
 import ProductContext from "../../context/productContext";
 
 const Navbar = () => {
-  const { products, openSideMenu } = useContext(ProductContext);
+  const { openSideMenu, cart } = useContext(ProductContext);
   return (
     <Style.Navbar>
       <Style.NavbarItem>
@@ -15,7 +15,7 @@ const Navbar = () => {
       <Style.NavbarItem>
         <Style.CartContainer onClick={() => openSideMenu()}>
           <MdShoppingCart size={20} />
-          <span>{products.length}</span>
+          <span>{cart.length}</span>
         </Style.CartContainer>
       </Style.NavbarItem>
     </Style.Navbar>

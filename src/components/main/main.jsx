@@ -1,14 +1,16 @@
+import { useContext } from "react";
 import Product from "../product/product";
 import { Section } from "./style";
+import ProductContext from "../../context/productContext";
 
 const Main = () => {
+  const { products } = useContext(ProductContext);
+
   return (
     <Section>
-      {Array(50)
-        .fill()
-        .map((_, index) => (
-          <Product key={index} />
-        ))}
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
     </Section>
   );
 };

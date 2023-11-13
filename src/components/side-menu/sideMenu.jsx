@@ -6,7 +6,7 @@ import * as Style from "./style";
 import { motion } from "framer-motion";
 
 const SideMenu = () => {
-  const { closeSideMenu, menuIsOpen } = useContext(ProductContext);
+  const { closeSideMenu, menuIsOpen, cart, setCurrency, total, finishOrder } = useContext(ProductContext);
 
   return (
     <Style.Container as={motion.div} initial={{ translateX: "100%" }} animate={{ translateX: menuIsOpen ? "0%" : "100%" }} transition={{ duration: 0.5 }}>
@@ -20,21 +20,21 @@ const SideMenu = () => {
         </Style.ContainerHolder>
 
         <Style.ContainerHolder>
-          {Array(4)
-            .fill(0)
-            .map((_, index) => (
-              <ProductPreview key={index} />
-            ))}
+          {cart.length === 0 && <Style.EmptyCart>Nenhum produto no carrinho</Style.EmptyCart>}
+
+          {cart.map((product) => (
+            <ProductPreview key={product.id} product={product} />
+          ))}
         </Style.ContainerHolder>
 
         <Style.ContainerHolder>
-          <div>Subtotal</div>
-          <div>R$ 0,00</div>
+          <div>Total</div>
+          <div>{setCurrency(total)}</div>
         </Style.ContainerHolder>
       </div>
 
       <Style.FinishHolder>
-        <button>Finalizar Compra</button>
+        <button onClick={finishOrder()}>Finalizar Compra</button>
       </Style.FinishHolder>
     </Style.Container>
   );
