@@ -18,6 +18,7 @@ export const Product = styled.div`
 
 export const ImgProduct = styled.img`
   align-self: center;
+  user-select: none;
 `;
 
 export const InfoProduct = styled.div`

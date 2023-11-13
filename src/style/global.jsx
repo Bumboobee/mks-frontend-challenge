@@ -48,6 +48,7 @@ export const CloseButton = styled.div`
   font-size: ${fontSizeBase + 16}px;
   padding: 2px;
   transition: .3s ease;
+  user-select: none;
 
   &:hover {
     color: ${colorPalet.colorBaseBlack100};

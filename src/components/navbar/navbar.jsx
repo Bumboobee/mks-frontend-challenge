@@ -1,7 +1,7 @@
-import * as Style from "./style";
-import Logo from "../../../public/logos/logo.svg";
 import { MdShoppingCart } from "react-icons/md";
 import { useContext } from "react";
+import * as Style from "./style";
+import Logo from "../../../public/logos/logo.svg";
 import ProductContext from "../../context/productContext";
 
 const Navbar = () => {

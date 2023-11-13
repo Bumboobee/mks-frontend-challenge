@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Product from "../product/product";
 import { Section } from "./style";
+import Product from "../product/product";
 import ProductContext from "../../context/productContext";
 
 const Main = () => {

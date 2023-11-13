@@ -4,7 +4,8 @@ import * as Style from "./style";
 import ProductContext from "../../context/productContext";
 
 const ProductPreview = ({ product }) => {
-  const { setCurrency, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(ProductContext);
+  const { setCurrency, removeFromCart, increaseQuantity, decreaseQuantity } =
+    useContext(ProductContext);
 
   return (
     <Style.PreviewProduct>
@@ -25,7 +26,13 @@ const ProductPreview = ({ product }) => {
           <div name="productQtd">
             <span onClick={() => decreaseQuantity(product.id)}>-</span>
             <span>{product.quantity}</span>
-            <span onClick={() => {increaseQuantity(product.id)}}>+</span>
+            <span
+              onClick={() => {
+                increaseQuantity(product.id);
+              }}
+            >
+              +
+            </span>
           </div>
         </Style.SecondHolder>
 

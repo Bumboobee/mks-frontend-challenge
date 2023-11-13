@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import * as Style from "./style";
-import { AiTwotoneShopping } from "react-icons/ai";
-import ProductContext from "../../context/productContext";
 import { Skeleton } from "@mui/material";
+import { AiTwotoneShopping } from "react-icons/ai";
+import * as Style from "./style";
+import ProductContext from "../../context/productContext";
 
 const Product = ({ product }) => {
-  const { setCurrency, addToCart } = useContext(ProductContext);
+  const { setCurrency, addToCart, isFetching } = useContext(ProductContext);
   return (
     <Style.Product>
-      {product.photo ? (
+      {!isFetching ? (
         <Style.ImgProduct src={product.photo} alt={product.name} width={170} />
       ) : (
         <Skeleton variant="rounded" width="100%" height={170} />
@@ -16,20 +16,20 @@ const Product = ({ product }) => {
 
       <Style.InfoProduct>
         <Style.MainInfo>
-          {product.name ? (
+          {!isFetching ? (
             <Style.TitleProduct>{product.name}</Style.TitleProduct>
           ) : (
             <Skeleton variant="text" width={100} height={60} />
           )}
 
-          {product.price ? (
+          {!isFetching ? (
             <Style.Price>{setCurrency(product.price)}</Style.Price>
           ) : (
             <Skeleton variant="text" width={100} height={60} />
           )}
         </Style.MainInfo>
         
-        {product.description ? (
+        {!isFetching ? (
           <p>{product.description}</p>
         ) : (
           <Skeleton variant="text" width="100%" height={60} />
@@ -39,10 +39,10 @@ const Product = ({ product }) => {
       <Style.ButtonContainer>
         <Style.ButtonBuy
           onClick={() => addToCart(product)}
-          disabled={!product.id}
+          disabled={isFetching}
           style={{
-            opacity: product.id ? 1 : 0.7,
-            cursor: product.id ? "pointer" : "not-allowed",
+            opacity: !isFetching ? 1 : 0.7,
+            cursor: !isFetching ? "pointer" : "not-allowed",
           }}
         >
           <AiTwotoneShopping size={20} />

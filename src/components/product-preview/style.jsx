@@ -68,6 +68,7 @@ export const FirstHolder = styled.div`
     height: 60px;
     object-fit: contain;
     border-radius: 8px;
+    user-select: none;
 
     @media (max-width: ${screenBreakPoints.mobile}) {
       width: 90px;

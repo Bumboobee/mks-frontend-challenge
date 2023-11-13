@@ -54,6 +54,7 @@ export const ContainerHolder = styled.div`
     font-size: ${fontSizeBase + 14}px;
     font-weight: 700;
     line-height: 15px;
+    padding: ${spaceSystem.paddingScaleSmall};
   }
 `;
 
@@ -80,7 +81,6 @@ export const FinishHolder = styled.div`
 
   & > button {
     width: 100%;
-
     height: 90px;
     border: none;
     font-size: ${fontSizeBase + 14}px;
@@ -91,6 +91,7 @@ export const FinishHolder = styled.div`
     color: ${colorPalet.colorBaseWhite50};
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    user-select: none;
   }
 
   & > button:hover {
