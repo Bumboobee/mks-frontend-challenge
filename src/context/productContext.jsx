@@ -189,11 +189,22 @@ export const ProductProvider = ({ children }) => {
   }, []);
 
   const finishOrder = useCallback(() => {
-    alert('Compra  no valor de  finalizada com sucesso!')
+    const order = {
+      products: cart,
+      total,
+    }
 
-    // toast.success(`Compra  no valor de  finalizada com sucesso!`);
-  }, []);
+    if(cart.length === 0) {
+      return;
+    } 
 
+    const productsQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+    
+    closeSideMenu()
+
+    toast.success(`Compra de ${productsQuantity} no valor de ${setCurrency(order.total)} finalizada com sucesso!`);
+    setCart([]);
+  }, [cart, total, setCurrency, closeSideMenu]);
 
   useEffect(() => {
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);

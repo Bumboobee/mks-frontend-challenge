@@ -34,7 +34,7 @@ const SideMenu = () => {
       </div>
 
       <Style.FinishHolder>
-        <button onClick={finishOrder()}>Finalizar Compra</button>
+        <button onClick={() => finishOrder()}>Finalizar Compra</button>
       </Style.FinishHolder>
     </Style.Container>
   );
