@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  colorPalet,
+  colorPallete,
   spaceSystem,
   fontSizeBase,
   screenBreakPoints,
@@ -11,7 +11,7 @@ export const PreviewProduct = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  background-color: ${colorPalet.colorBaseWhite50};
+  background-color: ${colorPallete.colorBaseWhite50};
   padding: ${spaceSystem.paddingSmall};
   align-items: center;
   border-radius: 8px;
@@ -35,7 +35,7 @@ export const CloseContainer = styled.div`
     @media (max-width: ${screenBreakPoints.mobile}) {
       background-color: transparent;
       font-size: ${fontSizeBase + 12}px;
-      color: ${colorPalet.colorBaseGray100};
+      color: ${colorPallete.colorBaseGray100};
       font-weight: 500;
     }
   }
@@ -53,7 +53,7 @@ export const FirstHolder = styled.div`
   & > p {
     font-size: ${fontSizeBase + 3}px;
     font-weight: 400;
-    color: ${colorPalet.colorBaseGray100};
+    color: ${colorPallete.colorBaseGray100};
     max-width: 115px;
 
     @media (max-width: ${screenBreakPoints.mobile}) {
@@ -101,7 +101,7 @@ export const SecondHolder = styled.div`
   & > label {
     font-size: ${fontSizeBase - 5}px;
     font-weight: 400;
-    color: ${colorPalet.colorBaseBlack100};
+    color: ${colorPallete.colorBaseBlack100};
 
     @media (max-width: ${screenBreakPoints.mobile}) {
       display: none;
@@ -111,9 +111,9 @@ export const SecondHolder = styled.div`
   & > div {
     width: 50px;
     height: 13px;
-    border: 1px solid ${colorPalet.colorBaseGray10};
+    border: 1px solid ${colorPallete.colorBaseGray10};
     border-radius: 4px;
-    color: ${colorPalet.colorBaseBlack100};
+    color: ${colorPallete.colorBaseBlack100};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,8 +126,8 @@ export const SecondHolder = styled.div`
 
       &:nth-child(2) {
         padding: 0 6px;
-        border-left: 0.5px solid ${colorPalet.colorBaseGray10};
-        border-right: 0.5px solid ${colorPalet.colorBaseGray10};
+        border-left: 0.5px solid ${colorPallete.colorBaseGray10};
+        border-right: 0.5px solid ${colorPallete.colorBaseGray10};
       }
 
       &:first-child,
@@ -154,7 +154,7 @@ export const SecondHolder = styled.div`
 `;
 
 export const ThirdHolder = styled.div`
-  color: ${colorPalet.colorBaseBlack100};
+  color: ${colorPallete.colorBaseBlack100};
   font-size: ${fontSizeBase + 4}px;
   font-weight: 700;
   line-height: 17px;
@@ -164,9 +164,9 @@ export const ThirdHolder = styled.div`
     font-size: ${fontSizeBase + 5}px;
     width: 100px;
     height: 41px;
-    background-color: ${colorPalet.colorBaseGray50};
+    background-color: ${colorPallete.colorBaseGray50};
     border-radius: 4px;
-    color: ${colorPalet.colorBaseWhite50};
+    color: ${colorPallete.colorBaseWhite50};
     display: flex;
     align-items: center;
     justify-content: center;

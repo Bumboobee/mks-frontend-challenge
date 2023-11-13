@@ -4,9 +4,12 @@ import { ToastContainer } from 'react-toastify';
 import GlobalStyle from "./style/global";
 import Home from "../src/pages/home";
 import NotFound from "../src/pages/notFound";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from './service/queryClient';
 
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
     <ProductProvider>
       <Router>
       <GlobalStyle />
@@ -19,6 +22,8 @@ function App() {
     </Router>
     <ToastContainer />
     </ProductProvider>
+    
+    </QueryClientProvider>
   );
 }
 

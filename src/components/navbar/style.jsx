@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { colorPalet, spaceSystem, fontSizeBase } from "./../../style/global";
+import { colorPallete, spaceSystem, fontSizeBase } from "./../../style/global";
 
 export const Navbar = styled.nav`
-  background-color: ${colorPalet.colorBlueBlue700};
+  background-color: ${colorPallete.colorBlueBlue700};
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -23,12 +23,12 @@ export const NavbarItem = styled.div`
 `;
 
 export const CartContainer = styled.div`
-  background-color: ${colorPalet.colorBaseWhite50};
+  background-color: ${colorPallete.colorBaseWhite50};
   border-radius: 8px;
   padding: ${spaceSystem.paddingScale};
   gap: 15px;
   display: flex;
-  color: ${colorPalet.colorBaseBlack100};
+  color: ${colorPallete.colorBaseBlack100};
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -41,6 +41,6 @@ export const CartContainer = styled.div`
   }
 
   &:hover {
-    background-color: ${colorPalet.colorBlueBlue50};
+    background-color: ${colorPallete.colorBlueBlue50};
   }
 `;

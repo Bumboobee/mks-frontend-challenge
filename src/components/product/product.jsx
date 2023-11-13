@@ -7,7 +7,7 @@ import ProductContext from "../../context/productContext";
 const Product = ({ product }) => {
   const { setCurrency, addToCart, isFetching } = useContext(ProductContext);
   return (
-    <Style.Product>
+    <Style.Product data-testid="product">
       {!isFetching ? (
         <Style.ImgProduct src={product.photo} alt={product.name} width={170} />
       ) : (
@@ -44,6 +44,7 @@ const Product = ({ product }) => {
             opacity: !isFetching ? 1 : 0.7,
             cursor: !isFetching ? "pointer" : "not-allowed",
           }}
+          data-testid="buy-button"
         >
           <AiTwotoneShopping size={20} />
           Comprar

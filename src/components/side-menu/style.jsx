@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import {
-  colorPalet,
+  colorPallete,
   spaceSystem,
   fontSizeBase,
   screenBreakPoints,
 } from "../../style/global";
 
 export const Container = styled.div`
-  background: ${colorPalet.colorBlueBlue700};
+  background: ${colorPallete.colorBlueBlue700};
   box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
   position: fixed;
   right: 0;
@@ -15,7 +15,7 @@ export const Container = styled.div`
   z-index: 9999;
   width: 415px;
   height: 100vh;
-  color: ${colorPalet.colorBaseWhite50};
+  color: ${colorPallete.colorBaseWhite50};
 
   @media (max-width: ${screenBreakPoints.mobile}) {
     width: 330px;
@@ -38,7 +38,7 @@ export const ContainerHolder = styled.div`
     }
 
     &::-webkit-scrollbar-thumb {
-      background: ${colorPalet.colorBaseWhite50};
+      background: ${colorPallete.colorBaseWhite50};
       border-radius: 5px;
       height: 10px;
     }
@@ -87,22 +87,22 @@ export const FinishHolder = styled.div`
     font-weight: 700;
     line-height: 15px;
     font-family: "Montserrat", sans-serif;
-    background-color: ${colorPalet.colorBaseBlack100};
-    color: ${colorPalet.colorBaseWhite50};
+    background-color: ${colorPallete.colorBaseBlack100};
+    color: ${colorPallete.colorBaseWhite50};
     cursor: pointer;
     transition: 0.3s ease-in-out;
     user-select: none;
   }
 
   & > button:hover {
-    background-color: ${colorPalet.colorBaseWhite50};
-    color: ${colorPalet.colorBaseBlack100};
+    background-color: ${colorPallete.colorBaseWhite50};
+    color: ${colorPallete.colorBaseBlack100};
   }
 `;
 
 export const EmptyCart = styled.div`
-  background-color: ${colorPalet.colorBaseWhite50};
+  background-color: ${colorPallete.colorBaseWhite50};
   padding: 14px;
-  color: ${colorPalet.colorBaseBlack100};
+  color: ${colorPallete.colorBaseBlack100};
   border-radius: 2px;
 `

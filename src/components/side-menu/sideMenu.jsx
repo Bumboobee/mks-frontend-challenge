@@ -10,6 +10,8 @@ const SideMenu = () => {
 
   return (
     <Style.Container
+    data-testid="side-menu"
+    data-ishide={!menuIsOpen}
       as={motion.div}
       initial={{ translateX: "100%" }}
       animate={{ translateX: menuIsOpen ? "0%" : "100%" }}
@@ -20,7 +22,7 @@ const SideMenu = () => {
           <Style.Header>
             <h2>Carrinho de compras</h2>
 
-            <CloseButton onClick={() => closeSideMenu()}>X</CloseButton>
+            <CloseButton onClick={() => closeSideMenu()} data-testid="close-button">X</CloseButton>
           </Style.Header>
         </Style.ContainerHolder>
 

@@ -7,7 +7,7 @@ const Main = () => {
   const { products } = useContext(ProductContext);
 
   return (
-    <Section>
+    <Section data-testid="main-section">
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}

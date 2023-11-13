@@ -4,6 +4,8 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 
+//if use import.meta.env.VITE_API_URL, the test will fail, not found a work around yet
+const baseUrl = "https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=name&orderBy=ASC"
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
@@ -13,7 +15,7 @@ export const ProductProvider = ({ children }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const { data, isFetching } = useQuery("products", async () => {
-    const response = await axios.get(import.meta.env.VITE_API_URL);
+    const response = await axios.get(baseUrl);
     return response.data.products;
   })
 

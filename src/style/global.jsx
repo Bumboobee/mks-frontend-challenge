@@ -1,6 +1,6 @@
 import { styled, createGlobalStyle } from "styled-components";
 
-export const colorPalet = {
+export const colorPallete = {
   colorBaseBlack100: "#000000",
   colorBaseGray50: "#373737",
   colorBaseGray100: "#2C2C2C",
@@ -32,14 +32,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    background-color: ${colorPalet.colorBaseWhite50};
+    background-color: ${colorPallete.colorBaseWhite50};
   }
 `;
 
 export const CloseButton = styled.div`
   width: 38px;
   height: 38px;
-  background: ${colorPalet.colorBaseBlack100};
+  background: ${colorPallete.colorBaseBlack100};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,8 +51,8 @@ export const CloseButton = styled.div`
   user-select: none;
 
   &:hover {
-    color: ${colorPalet.colorBaseBlack100};
-    background: ${colorPalet.colorBaseGray10};
+    color: ${colorPallete.colorBaseBlack100};
+    background: ${colorPallete.colorBaseGray10};
   }
 `;
 

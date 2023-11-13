@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colorPalet, spaceSystem, fontSizeBase } from "./../../style/global";
+import { colorPallete, spaceSystem, fontSizeBase } from "./../../style/global";
 
 export const Product = styled.div`
   display: flex;
@@ -50,8 +50,8 @@ export const Price = styled.span`
   font-weight: 700;
   padding: ${spaceSystem.paddingScaleSmall};
   border-radius: 5px;
-  background-color: ${colorPalet.colorBaseGray50};
-  color: ${colorPalet.colorBaseWhite50};
+  background-color: ${colorPallete.colorBaseGray50};
+  color: ${colorPallete.colorBaseWhite50};
 `;
 
 export const ButtonContainer = styled.div`
@@ -65,9 +65,9 @@ export const ButtonBuy = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${colorPalet.colorBlueBlue700};
+  background-color: ${colorPallete.colorBlueBlue700};
   border: none;
-  color: ${colorPalet.colorBaseWhite50};
+  color: ${colorPallete.colorBaseWhite50};
   font-weight: 600;
   font-size: ${fontSizeBase + 4}px;
   font-family: "Montserrat", sans-serif;
@@ -81,7 +81,7 @@ export const ButtonBuy = styled.button`
   user-select: none;
 
   &:hover {
-    background-color: ${colorPalet.colorBlueBlue50};
-    color: ${colorPalet.colorBaseBlack100};
+    background-color: ${colorPallete.colorBlueBlue50};
+    color: ${colorPallete.colorBaseBlack100};
   }
 `;

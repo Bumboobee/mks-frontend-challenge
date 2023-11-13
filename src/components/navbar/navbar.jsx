@@ -13,7 +13,7 @@ const Navbar = () => {
       </Style.NavbarItem>
 
       <Style.NavbarItem>
-        <Style.CartContainer onClick={() => openSideMenu()}>
+        <Style.CartContainer onClick={() => openSideMenu()} data-testid="cart-button">
           <MdShoppingCart size={20} />
           <span>{cart.length}</span>
         </Style.CartContainer>
