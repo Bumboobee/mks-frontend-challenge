@@ -189,9 +189,9 @@ export const ProductProvider = ({ children }) => {
   }, []);
 
   const finishOrder = useCallback(() => {
+    alert('Compra  no valor de  finalizada com sucesso!')
 
-
-    toast.success(`Compra  no valor de  finalizada com sucesso!`);
+    // toast.success(`Compra  no valor de  finalizada com sucesso!`);
   }, []);
 
 
