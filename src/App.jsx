@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ProductProvider } from "./context/productContext";
 import GlobalStyle from "./style/global";
 import Home from "../src/pages/home";
 import NotFound from "../src/pages/notFound";
 
 function App() {
   return (
-    <Router>
+    <ProductProvider>
+      <Router>
       <GlobalStyle />
 
       <Routes>
@@ -14,6 +16,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
+    </ProductProvider>
   );
 }
 
