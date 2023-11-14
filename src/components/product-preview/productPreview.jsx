@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CloseButton } from "../../style/global";
+import PropTypes from "prop-types";
 import * as Style from "./style";
 import ProductContext from "../../context/productContext";
 
@@ -43,5 +44,11 @@ const ProductPreview = ({ product }) => {
     </Style.PreviewProduct>
   );
 };
+
+
+ProductPreview.PropTypes = {
+  product: PropTypes.object.isRequired,
+};
+
 
 export default ProductPreview;
