@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Skeleton } from "@mui/material";
 import { AiTwotoneShopping } from "react-icons/ai";
+import PropTypes from "prop-types";
 import * as Style from "./style";
 import ProductContext from "../../context/productContext";
 
@@ -52,6 +53,10 @@ const Product = ({ product }) => {
       </Style.ButtonContainer>
     </Style.Product>
   );
+};
+
+Product.PropTypes = {
+  product: PropTypes.object.isRequired,
 };
 
 export default Product;
