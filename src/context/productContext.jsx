@@ -32,7 +32,6 @@ export const ProductProvider = ({ children }) => {
       const existingProductIndex = prevCart.findIndex(
         (item) => item.id === product.id
       );
-
       //   if product already exists in the cart, update the quantity
       if (existingProductIndex !== -1) {
         const updatedCart = [...prevCart];
@@ -41,13 +40,17 @@ export const ProductProvider = ({ children }) => {
         updatedProduct.quantity += 1;
         updatedCart[existingProductIndex] = updatedProduct;
 
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+
         return updatedCart;
       } else {
         // add it with quantity 1
+        localStorage.setItem("cart", JSON.stringify([...prevCart, { ...product, quantity: 1 }]));
+       
         return [...prevCart, { ...product, quantity: 1 }];
       }
     });
-  }, []);
+  }, [ ]);
 
   const removeFromCart = useCallback((productId) => {
     const updatedCart = [...cart];
@@ -56,6 +59,8 @@ export const ProductProvider = ({ children }) => {
     );
     existingProductIndex !== -1 && updatedCart.splice(existingProductIndex, 1);
     setCart(updatedCart);
+
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   }, [cart]);
 
   const increaseQuantity = useCallback((productId) => {
@@ -69,6 +74,7 @@ export const ProductProvider = ({ children }) => {
       updatedProduct.quantity += 1;
       updatedCart[existingProductIndex] = updatedProduct;
 
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
       return updatedCart;
     });
   }, []);
@@ -88,6 +94,7 @@ export const ProductProvider = ({ children }) => {
         updatedCart.splice(existingProductIndex, 1);
       }
       
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
       return updatedCart;
     });
   }, []);
@@ -116,12 +123,18 @@ export const ProductProvider = ({ children }) => {
 
     toast.success(`Compra de ${productsQuantity} produto(s) no valor de ${setCurrency(order.total)} finalizada com sucesso!`);
     setCart([]);
+    localStorage.removeItem("cart");
   }, [cart, total, setCurrency, closeSideMenu]);
 
   useEffect(() => {
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     setTotal(total);
   }, [cart]);
+
+  useEffect(() => { 
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    cart && setCart(cart);
+  }, []);
 
   const value = useMemo(() => {
     return {
