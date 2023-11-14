@@ -13,7 +13,11 @@ A requisição da API foi construída com react-query, responsável por implemen
 ~~~
 
 ## ⚙️ Technical Choices
-Optei por utilizar o React devido à sua simplicidade e efetividade em relação à modularização de código. Toda a parte de gerenciamento de estados, arrow functions e configuração inicial dos dados foi feita utilizando a Context API do React, tornando tudo mais gerenciável a longo prazo.
+Optei por utilizar o React devido à sua simplicidade e efetividade em relação à modularização de código. Toda a parte de gerenciamento de estados, arrow functions e configuração inicial dos dados foi feita utilizando a Context API do React, tornando tudo mais gerenciável a longo prazo. 
+
+~~~sql 
+--PS: como item final, adicionei o salvamento dos itens do carrinho no local storage, isso somente para caso o usuário feche a página, seus itens ficaram salvos.
+~~~
 
 ## 🎨 UX Libraries
 Foram utilizadas algumas bibliotecas voltadas para UX, como o React Framer Motion, responsável pelas transições de slide in (out), e a biblioteca de notificações minimalistas, Toastify. Vale resaltar que o contrução dos estilos utilizando styled-components foi totalmente criada do zero. A biblioteca Material UI foi utilizada pra gerar os skeletons equanto os dados não são totalmente carregados ou nas chamadas de cache (ao sair e retornar para a página).
