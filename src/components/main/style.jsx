@@ -9,6 +9,7 @@ export const Section = styled.section`
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   justify-items: center;
+  min-height: calc(100vh - 235px);
 
   @media (max-width: 1180px) {
     grid-template-columns: repeat(3, 1fr);
