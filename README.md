@@ -25,21 +25,18 @@ O deploy pode ser conferido [aqui](https://mks-sistemas-shop.netlify.app/loja).
 
 ## 📦 Principais Dependências
 
-| Nome                      | Versão        |
-|---------------------------|---------------|
-| @emotion/react            | ^11.11.1      |
-| @emotion/styled           | ^11.11.0      |
-| @mui/material             | ^5.14.17      |
-| @mui/styled-engine-sc     | ^6.0.0-alpha.5|
-| axios                     | ^1.6.1        |
-| framer-motion             | ^10.16.4      |
-| react                     | ^18.2.0       |
-| react-dom                 | ^18.2.0       |
-| react-icons               | ^4.11.0       |
-| react-query               | ^3.39.3       |
-| react-router-dom          | ^6.18.0       |
-| react-toastify            | ^9.1.3        |
-| styled-components         | ^6.1.1        |
+| Nome                      | Versão        | Link                                              |
+|---------------------------|---------------|---------------------------------------------------|
+| @mui/material             | ^5.14.17      | [Material-UI Documentation]([https://mui.com/](https://mui.com/material-ui/getting-started/))               |
+| @mui/styled-engine-sc     | ^6.0.0-alpha.5| [Material-UI Styled Engine Documentation]([https://mui.com/customization/theming/#styled-engine](https://www.npmjs.com/package/@mui/styled-engine-sc))|
+| axios                     | ^1.6.1        | [Documentation](https://axios-http.com/ptbr/docs/intro)         |
+| framer-motion             | ^10.16.4      | [Documentation](https://www.npmjs.com/package/framer-motion)               |
+| react-dom                 | ^18.2.0       | [React Documentation](https://pt-br.legacy.reactjs.org/docs/react-dom.html) |
+| react-icons               | ^4.11.0       | [GitHub Repository](https://react-icons.github.io/react-icons/) |
+| react-query               | ^3.39.3       | [Documentation](https://www.npmjs.com/package/react-query)         |
+| react-router-dom          | ^6.18.0       | [Documentation](https://reactrouter.com/)|
+| react-toastify            | ^9.1.3        | [Documentation](https://fkhadra.github.io/react-toastify/) |
+| styled-components         | ^6.1.1        | [Documentation](https://www.styled-components.com/)        |
 
 ## ⚙️ Configuração do Projeto
 
