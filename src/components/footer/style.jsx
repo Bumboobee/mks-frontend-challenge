@@ -9,9 +9,6 @@ export const Footer = styled.div`
   justify-content: center;
   align-items: center;
   color: ${colorPallete.colorBaseBlack100};
-  position: fixed;
-  bottom: 0;
-  left: 0;
 
   & > p {
     font-size: ${fontSizeBase + 2}px;

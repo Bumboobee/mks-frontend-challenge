@@ -12,7 +12,7 @@ A requisição da API foi construída com react-query, responsável por implemen
 Optei por utilizar o React devido à sua simplicidade e efetividade em relação à modularização de código. Toda a parte de gerenciamento de estados, arrow functions e configuração inicial dos dados foi feita utilizando a Context API do React, tornando tudo mais gerenciável a longo prazo.
 
 ## 🎨 UX Libraries
-Foram utilizadas algumas bibliotecas voltadas para UX, como o React Framer Motion, responsável pelas transições de slide in (out), e a biblioteca de notificações minimalistas, Toastify. Vale resaltar que o contrução dos estilos utilizando styled-components foi totalmente criada do zero.
+Foram utilizadas algumas bibliotecas voltadas para UX, como o React Framer Motion, responsável pelas transições de slide in (out), e a biblioteca de notificações minimalistas, Toastify. Vale resaltar que o contrução dos estilos utilizando styled-components foi totalmente criada do zero. A biblioteca Material UI foi utilizada pra gerar os skeletons equanto os dados não são totalmente carregados.
 
 ## 🚀 Deployment
 Como serviço de deploy, utilizei o Netlify, onde é possível gerenciar todas as configurações do site.

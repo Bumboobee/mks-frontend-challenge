@@ -7,10 +7,3 @@ describe("App", () => {
     render(<App />)
   });
 });
-
-
-// it("renders correctly", () => { 
-//   const { queryByTestId } = render(<Navbar />);
-
-//   expect(queryByTestId("cart-button")).toBeTruthy();
-// });
