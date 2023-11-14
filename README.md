@@ -27,8 +27,8 @@ O deploy pode ser conferido [aqui](https://mks-sistemas-shop.netlify.app/loja).
 
 | Nome                      | Versão        | Link                                              |
 |---------------------------|---------------|---------------------------------------------------|
-| @mui/material             | ^5.14.17      | [Material-UI Documentation]([https://mui.com/](https://mui.com/material-ui/getting-started/))               |
-| @mui/styled-engine-sc     | ^6.0.0-alpha.5| [Material-UI Styled Engine Documentation]([https://mui.com/customization/theming/#styled-engine](https://www.npmjs.com/package/@mui/styled-engine-sc))|
+| @mui/material             | ^5.14.17      | [Material-UI Documentation]([https://mui.com/](https://mui.com/material-ui/getting-started/)              |
+| @mui/styled-engine-sc     | ^6.0.0-alpha.5| [Material-UI Styled Engine Documentation]([https://mui.com/customization/theming/#styled-engine](https://www.npmjs.com/package/@mui/styled-engine-sc)|
 | axios                     | ^1.6.1        | [Documentation](https://axios-http.com/ptbr/docs/intro)         |
 | framer-motion             | ^10.16.4      | [Documentation](https://www.npmjs.com/package/framer-motion)               |
 | react-dom                 | ^18.2.0       | [React Documentation](https://pt-br.legacy.reactjs.org/docs/react-dom.html) |
