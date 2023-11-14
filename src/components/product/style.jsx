@@ -10,9 +10,15 @@ export const Product = styled.div`
   width: 220px;
   overflow: hidden;
   justify-content: space-between;
+  transition: .4s;
 
   @media (max-width: 1180px) {
     width: 250px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px 0 rgba(43, 43, 43, 0.2);
   }
 `;
 

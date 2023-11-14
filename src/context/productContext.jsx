@@ -84,6 +84,10 @@ export const ProductProvider = ({ children }) => {
       updatedProduct.quantity -= 1;
       updatedCart[existingProductIndex] = updatedProduct;
 
+      if (updatedProduct.quantity === 0) {
+        updatedCart.splice(existingProductIndex, 1);
+      }
+      
       return updatedCart;
     });
   }, []);
