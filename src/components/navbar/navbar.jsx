@@ -15,7 +15,12 @@ const Navbar = () => {
       <Style.NavbarItem>
         <Style.CartContainer onClick={() => openSideMenu()} data-testid="cart-button">
           <MdShoppingCart size={20} />
-          <span>{cart.length}</span>
+          
+          <span>
+            {
+              cart.reduce((acc, item) => acc + item.quantity, 0)
+            }
+          </span>
         </Style.CartContainer>
       </Style.NavbarItem>
     </Style.Navbar>
