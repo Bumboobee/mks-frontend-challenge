@@ -8,6 +8,10 @@ O projeto foi criado utilizando Vite@latest e inclui styled-components, react-ro
 ## 🌐 API Request
 A requisição da API foi construída com react-query, responsável por implementar o conceito de SWR (stale while revalidate). Dessa forma, qualquer alteração que ocorrer no servidor será refletida automaticamente na tela, sem a necessidade de atualização. Esse conceito é ideal para aplicações como gerenciadores de conta e e-commerces, pois envolve transações em tempo real. Além disso, os dados são mantidos em cache por até 60s, evitando a necessidade de chamar a API nesse intervalo caso o usuário atualize a tela.
 
+~~~sql 
+--PS: para testar essa implementação, saia da aba da página, aguarde alguns segundos e depois volte. O skeleton que voce verá indica que o SWR está revalidando os dados em cache com os dados chamados do servidor, caso encontre algo que foi alterado diretamente no servidor, ele é autosuficiente para atualizar a informação na tela, sem a necessidade do usuário recaregar a página!
+~~~
+
 ## ⚙️ Technical Choices
 Optei por utilizar o React devido à sua simplicidade e efetividade em relação à modularização de código. Toda a parte de gerenciamento de estados, arrow functions e configuração inicial dos dados foi feita utilizando a Context API do React, tornando tudo mais gerenciável a longo prazo.
 
